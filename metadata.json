@@ -1,0 +1,5 @@
+{
+  "name": "TEMPUS Screensaver",
+  "description": "A cinematic, weather-reactive Windows screensaver with procedural audio and dynamic particle systems.",
+  "requestFramePermissions": ["geolocation"]
+}

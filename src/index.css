@@ -1,0 +1,65 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@300;400;700&family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+@theme {
+  --font-sans: "Roboto Condensed", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Anton", sans-serif;
+  --font-label: "Oswald", sans-serif;
+  
+  --color-tempus-black: #080000;
+  --color-tempus-card: #120000;
+  --color-tempus-red: #CC0000;
+  --color-tempus-bright-red: #FF1A1A;
+  --color-tempus-gray: #888888;
+  --color-tempus-dark-gray: #555555;
+}
+
+@layer base {
+  body {
+    @apply bg-tempus-black text-white font-sans overflow-hidden;
+    user-select: none;
+    cursor: none; /* Hide cursor for screensaver feel */
+  }
+}
+
+.glow-red {
+  text-shadow: 0 0 15px rgba(204, 0, 0, 0.45), 0 0 30px rgba(204, 0, 0, 0.2);
+}
+
+.glow-red-box {
+  box-shadow: 0 0 20px rgba(204, 0, 0, 0.35);
+}
+
+.pulse-opacity {
+  animation: pulse-opacity 2s ease-in-out infinite;
+}
+
+@keyframes pulse-opacity {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.8; }
+}
+
+.lightning-flash {
+  animation: lightning 0.3s ease-out forwards;
+}
+
+@keyframes lightning {
+  0% { background: rgba(255, 255, 255, 0); }
+  10% { background: rgba(255, 255, 255, 0.15); }
+  20% { background: rgba(255, 255, 255, 0); }
+  30% { background: rgba(255, 255, 255, 0.08); }
+  100% { background: rgba(255, 255, 255, 0); }
+}
+
+.vignette {
+  background: radial-gradient(circle, transparent 40%, rgba(0,0,0,0.8) 100%);
+}
+
+.vignette-pulse {
+  animation: vignette-pulse 5s ease-in-out infinite;
+}
+
+@keyframes vignette-pulse {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 0.9; }
+}
